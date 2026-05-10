@@ -2,6 +2,10 @@
 
 My GitHub stats (powered by [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)):
 
-[![github stats](https://github-readme-stats.vercel.app/api?username=nvtai24&show_icons=true&hide_title=true&hide_border=true)](https://github.com/nvtai24)
+![GitHub Stats Card](https://ghstats.dev/api/card?username=nvtai24)
 
-[![top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nvtai24&layout=compact&hide_border=true)](https://github.com/nvtai24)
+![Top Languages](https://ghstats.dev/api/langs?username=nvtai24)
+
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=nvtai24&theme=radical&hide_border=true)
+
+[View my GitHub profile →](https://github.com/nvtai24)
