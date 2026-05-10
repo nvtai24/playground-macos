@@ -2,31 +2,36 @@
 
 ## Biography
 
-Hey there! I am a PhD student at the [Computer Science and Engineering](https://www.eecs.psu.edu/) department of [Pennsylvania State University](https://www.psu.edu/). Previously, I received my master's degree in [Computer Science](https://www.bu.edu/cs/) from [Boston University](https://www.bu.edu/) and my bachelor’s degree in [Software Engineering](http://sse.tongji.edu.cn/) from [Tongji University](https://www.tongji.edu.cn/).
+Hi, my name is Tai Nguyen Van.
 
-I'm trying to find a balance between research and engineering.
+I am a backend developer and a Bachelor of Software Engineering student at FPT University, expected to graduate in 2026.
 
-My current research interests primarily focus on understanding and enhancing the continuity, generalizability, efficiency, and other key properties of machine learning. I am also interested in large multimodal models.
+I enjoy building and maintaining the systems that keep applications running smoothly and efficiently. My work focuses on clear business logic, reliable data handling, and maintainable code that solves real user needs.
 
-I'm also learning web development and building machine learning software and systems.
+I am passionate about programming, problem-solving, and continuously learning new technologies as I grow on my journey as a developer.
 
 
 ## Contact
 
 Contact me by:
 
-- Email: [renovamenzxh@gmail.com](mailto:renovamenzxh@gmail.com)
-- Github: [@Renovamen](https://github.com/Renovamen)
-- [Google Scholar](https://scholar.google.com/citations?user=RuW6xgMAAAAJ)
-- Linkedin: [xiaohan-zou](https://www.linkedin.com/in/xiaohan-zou)
-- 知乎: [@西伯利亚大恶龙](https://www.zhihu.com/people/chao-neng-gui-su)
-- Personal Website: [zxh.me](https://zxh.me)
+- Email: [nvtai24work@gmail.com](mailto:nvtai24work@gmail.com)
+- Github: [@nvtai24](https://github.com/nvtai24)
+- Linkedin: [nvtai24](https://www.linkedin.com/in/nvtai24/)
+- Facebook: [nvtai24](https://www.facebook.com/nvtai24)
+- Personal Website: [nvtai24.vercel.app](https://nvtai24.vercel.app/)
 
 
-## Résumé
+## Education
 
-- Normal version: [English](https://zxh.me/files/cv/en.pdf) / [中文](https://zxh.me/files/cv/cn.pdf)
+- Bachelor of Software Engineering, FPT University | 2022 - 2026 (expected)
 
-  中文版的更新很可能不及时
 
-- Interesting version: [portfolio.zxh.me](https://portfolio.zxh.me) / [resume.zxh.io](https://resume.zxh.io)
+## Tech Stack
+
+- Languages: Java, C#, JavaScript, TypeScript, Python
+- Frontend: HTML, CSS, Bootstrap, Tailwind CSS, jQuery, React, Redux
+- Backend: Spring, Hibernate, .NET, Node.js, Express, RabbitMQ
+- Databases: SQL Server, MySQL, PostgreSQL, MongoDB, Redis
+- DevOps: Git, Docker, Kubernetes, Jenkins, SonarQube, Nginx
+- Deployment: AWS, Vercel, Netlify, Railway, Heroku

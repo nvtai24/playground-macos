@@ -63,15 +63,20 @@ export default function Launchpad({ show, toggleLaunchpad }: LaunchpadProps) {
           grid="~ flow-row cols-4 sm:cols-7"
         >
           {search().map((app) => (
-            <div key={`launchpad-${app.id}`} h="32 sm:36" flex="~ col">
+            <div key={`launchpad-${app.id}`} h="32 sm:36" flex="~ col items-center">
               <a
-                className="w-14 sm:w-20 mx-auto"
+                className="size-14 sm:size-20 mx-auto flex-center overflow-hidden rounded-[22%] bg-white/90 shadow-lg shadow-black/20 ring-1 ring-white/40 transition-transform duration-150 hover:scale-105"
                 href={app.link}
                 target="_blank"
                 rel="noreferrer"
                 onClick={(e) => e.stopPropagation()}
               >
-                <img src={app.img} alt={app.title} title={app.title} />
+                <img
+                  className="size-full rounded-[22%] object-contain p-2.5"
+                  src={app.img}
+                  alt={app.title}
+                  title={app.title}
+                />
               </a>
               <span m="t-2 x-auto" text="white xs sm:sm">
                 {app.title}

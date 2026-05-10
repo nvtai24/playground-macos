@@ -13,8 +13,8 @@ const terminal: TerminalData[] = [
         content: (
           <div className="py-1">
             <div>
-              Hi, this is Xiaohan Zou. I am a PhD student at the Computer Science and
-              Engineering department of Pennsylvania State University.
+              Hi, this is Tai Nguyen Van. I am a backend-focused software engineering
+              student at FPT University.
             </div>
           </div>
         )
@@ -23,14 +23,28 @@ const terminal: TerminalData[] = [
         id: "about-interests",
         title: "interests.txt",
         type: "file",
-        content: "Machine Learning / Computer Vision / Multimodal Learning"
+        content: "Backend Development / System Design / Data Management / Clean Code"
       },
       {
         id: "about-who-cares",
         title: "who-cares.txt",
         type: "file",
         content:
-          "I'm looking for a research internship for Summer 2024. I'm open to collaboration on research projects."
+          "I'm building reliable backend systems and growing through real-world software engineering work."
+      },
+      {
+        id: "about-education",
+        title: "education.txt",
+        type: "file",
+        content:
+          "Bachelor of Software Engineering, FPT University | 2022 - 2026 (expected)"
+      },
+      {
+        id: "about-stack",
+        title: "stack.txt",
+        type: "file",
+        content:
+          "Java / C# / JavaScript / TypeScript / Python / Spring / .NET / Node.js / Express / SQL Server / MySQL / PostgreSQL / MongoDB / Redis / Docker / Kubernetes / Jenkins / AWS"
       },
       {
         id: "about-contact",
@@ -42,65 +56,55 @@ const terminal: TerminalData[] = [
               Email:{" "}
               <a
                 className="text-blue-300"
-                href="mailto:renovamenzxh@gmail.com"
+                href="mailto:nvtai24work@gmail.com"
                 target="_blank"
                 rel="noreferrer"
               >
-                renovamenzxh@gmail.com
+                nvtai24work@gmail.com
               </a>
             </li>
             <li>
               Github:{" "}
               <a
                 className="text-blue-300"
-                href="https://github.com/Renovamen"
+                href="https://github.com/nvtai24"
                 target="_blank"
                 rel="noreferrer"
               >
-                @Renovamen
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-blue-300"
-                href="https://scholar.google.com/citations?user=RuW6xgMAAAAJ"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Google Scholar
+                @nvtai24
               </a>
             </li>
             <li>
               Linkedin:{" "}
               <a
                 className="text-blue-300"
-                href="https://www.linkedin.com/in/xiaohan-zou"
+                href="https://www.linkedin.com/in/nvtai24/"
                 target="_blank"
                 rel="noreferrer"
               >
-                xiaohan-zou
+                nvtai24
               </a>
             </li>
             <li>
               Personal Website:{" "}
               <a
                 className="text-blue-300"
-                href="https://zxh.me"
+                href="https://nvtai24.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://zxh.me
+                https://nvtai24.vercel.app/
               </a>
             </li>
             <li>
-              知乎:{" "}
+              Facebook:{" "}
               <a
                 className="text-blue-300"
-                href="https://www.zhihu.com/people/chao-neng-gui-su"
+                href="https://www.facebook.com/nvtai24"
                 target="_blank"
                 rel="noreferrer"
               >
-                @西伯利亚大恶龙
+                nvtai24
               </a>
             </li>
           </ul>

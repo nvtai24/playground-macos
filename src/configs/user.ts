@@ -1,8 +1,8 @@
 import type { UserData } from "~/types";
 
 const user: UserData = {
-  name: "Xiaohan Zou",
-  avatar: "img/ui/avatar.jpg",
+  name: "Tai Nguyen Van",
+  avatar: "https://github.com/nvtai24.png",
   password: ""
 };
 

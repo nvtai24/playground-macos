@@ -1,6 +1,6 @@
 # playground-macos
 
-My portfolio website simulating macOS's GUI: https://portfolio.zxh.me
+Tai Nguyen Van's portfolio website simulating a macOS GUI: https://nvtai24.vercel.app/
 
 Powered by [React](https://reactjs.org/) + [Zustand](https://zustand-demo.pmnd.rs/) + [UnoCSS](https://uno.antfu.me/) + [TypeScript](https://www.typescriptlang.org/) + [Vite](https://vitejs.dev/).
 
@@ -41,7 +41,7 @@ pnpm build
 
 - **Update 2021.12.05**: Simulated the device's actual battery state using [Battery API](https://developer.mozilla.org/en-US/docs/Web/API/Battery_Status_API), displaying 100% charge on [unsupported browsers](https://developer.mozilla.org/en-US/docs/Web/API/Battery_Status_API#browser_compatibility).
 
-- **Update 2021.12.05**: Refactored for cleaner code by utilizing functional components and hooks. Refer to [this branch](https://github.com/Renovamen/playground-macos/tree/class-component) for the previous version implemented with class components.
+- **Update 2026.05.10**: Customized the fork with Tai Nguyen Van's profile, contact links, education, backend focus, GitHub stats, and portfolio shortcuts.
 
 
 &nbsp;
