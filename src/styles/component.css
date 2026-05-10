@@ -8,16 +8,15 @@
 
 .cc-grid {
   @apply backdrop-blur-xl rounded-xl;
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .dark .cc-grid {
-  @apply bg-white/10;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  @apply bg-gray-800/50;
+  border: 1px solid rgba(57, 255, 39, 0.08);
 }
 
 :not(.dark) .cc-grid {
-  @apply bg-white/60;
+  @apply bg-white/20;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -26,7 +25,7 @@
 }
 
 .dark .cc-btn {
-  @apply bg-gray-600 text-gray-400 hover:bg-gray-500;
+  @apply bg-gray-700/60 text-gray-300 hover:bg-gray-600/60;
 }
 
 :not(.dark) .cc-btn {
@@ -34,7 +33,15 @@
 }
 
 .cc-btn-active {
-  @apply size-7 flex items-center justify-center rounded-full bg-blue-500 text-white cursor-pointer hover:bg-blue-400 transition-colors;
+  @apply size-7 flex items-center justify-center rounded-full cursor-pointer transition-colors;
+}
+
+.dark .cc-btn-active {
+  @apply bg-blue-500 text-white hover:bg-blue-400;
+}
+
+:not(.dark) .cc-btn-active {
+  @apply bg-blue-500 text-white hover:bg-blue-400;
 }
 
 .cc-text {
@@ -42,7 +49,7 @@
 }
 
 .dark .cc-text {
-  @apply text-white/60;
+  @apply text-gray-400;
 }
 
 :not(.dark) .cc-text {

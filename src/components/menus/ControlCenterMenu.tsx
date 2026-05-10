@@ -21,19 +21,19 @@ const SliderComponent = ({
     <div className="slider flex items-center">
       <div
         className={`size-7 flex items-center justify-center rounded-l-full border-t border-l border-b ${
-          dark ? "bg-white/10 border-white/10" : "bg-gray-200 border-gray-300"
+          dark ? "bg-gray-700/50 border-gray-600/50" : "bg-gray-200 border-gray-300"
         }`}
       >
-        <span className={`${icon} text-xs ${dark ? "text-white/70" : "text-gray-600"}`} />
+        <span className={`${icon} text-xs ${dark ? "text-gray-300" : "text-gray-600"}`} />
       </div>
       <div
         className={`flex-1 h-7 rounded-r-full relative overflow-hidden border-t border-r border-b ${
-          dark ? "bg-white/10 border-white/10" : "bg-gray-200 border-gray-300"
+          dark ? "bg-gray-700/50 border-gray-600/50" : "bg-gray-200 border-gray-300"
         }`}
       >
         <div
           className={`absolute left-0 top-0 h-full transition-all ${
-            dark ? "bg-white/30" : "bg-blue-400"
+            dark ? "bg-blue-500" : "bg-blue-400"
           }`}
           style={{ width: `${value}%` }}
         />
@@ -93,7 +93,7 @@ export default function ControlCenterMenu({
   return (
     <div
       className={`w-80 h-96 max-w-full p-2.5 backdrop-blur-3xl fixed top-9.5 right-0 sm:right-1.5 rounded-2xl shadow-2xl ${
-        dark ? "text-white bg-gray-900/80" : "text-gray-900 bg-white/80"
+        dark ? "text-white bg-gray-800/80" : "text-gray-900 bg-white/60"
       }`}
       style={{
         display: "grid",
@@ -101,7 +101,7 @@ export default function ControlCenterMenu({
         gridTemplateRows: "repeat(5, 1fr)",
         gap: "0.5rem",
         border: dark
-          ? "1px solid rgba(255, 255, 255, 0.1)"
+          ? "1px solid rgba(255, 255, 255, 0.08)"
           : "1px solid rgba(0, 0, 0, 0.1)"
       }}
       ref={controlCenterRef}
