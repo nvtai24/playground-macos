@@ -30,7 +30,7 @@ export default function Login(props: MacActions) {
     <div
       className="size-full login text-center"
       style={{
-        background: `url(${wallpapers.katana}) center/cover no-repeat`
+        background: `url(${dark ? wallpapers.night2 : wallpapers.day2}) center/cover no-repeat`
       }}
       onClick={() => loginHandle()}
     >

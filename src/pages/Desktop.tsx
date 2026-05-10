@@ -239,7 +239,7 @@ export default function Desktop(props: MacActions) {
     <div
       className="size-full overflow-hidden bg-center bg-cover"
       style={{
-        backgroundImage: `url(${wallpapers.katana})`,
+        backgroundImage: `url(${dark ? wallpapers.night2 : wallpapers.day2})`,
         filter: `brightness( ${(brightness as number) * 0.7 + 50}% )`
       }}
     >
