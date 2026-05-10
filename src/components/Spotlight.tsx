@@ -254,28 +254,24 @@ export default function Spotlight({
       onClick={() => inputRef.current?.focus()}
       ref={spotlightRef}
     >
-      <div
-        className="w-full h-12 sm:h-14 rounded-lg bg-transparent"
-        grid="~ cols-8 sm:cols-11"
-      >
-        <div className="col-start-1 col-span-1 flex-center">
-          <span className="i-bx:search ml-1 text-c-600 text-[28px]" />
+      <div className="w-full h-12 sm:h-14 rounded-lg bg-transparent flex items-center">
+        <div className="w-12 flex items-center justify-center">
+          <span className="i-bx:search text-gray-600 dark:text-gray-400 text-[28px]" />
         </div>
         <input
           ref={inputRef}
-          className={`col-start-2 col-span-7 ${
-            curDetails ? "sm:col-span-9" : "sm:col-span-10"
-          } bg-transparent no-outline px-1`}
-          text="c-black xl sm:2xl"
+          className={`flex-1 bg-transparent outline-none text-xl sm:text-2xl ${
+            curDetails ? "pr-2" : "pr-4"
+          }`}
           placeholder="Spotlight Search"
           value={searchText}
           onChange={handleInputChange}
           autoFocus={true}
         />
         {curDetails && (
-          <div className="hidden sm:flex col-start-11 col-span-1 flex-center">
+          <div className="hidden sm:flex w-12 items-center justify-center">
             <img
-              w-8
+              className="w-8"
               src={curDetails.img}
               alt={curDetails.title}
               title={curDetails.title}
