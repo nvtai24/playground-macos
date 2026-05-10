@@ -4,18 +4,101 @@
   @apply text-white;
 }
 
+/* --------- Control Center --------- */
+
+.cc-grid {
+  @apply backdrop-blur-xl rounded-xl;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .cc-grid {
+  @apply bg-white/10;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+:not(.dark) .cc-grid {
+  @apply bg-white/60;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cc-btn {
+  @apply size-7 flex items-center justify-center rounded-full cursor-pointer transition-colors;
+}
+
+.dark .cc-btn {
+  @apply bg-gray-600 text-gray-400 hover:bg-gray-500;
+}
+
+:not(.dark) .cc-btn {
+  @apply bg-gray-200 text-gray-600 hover:bg-gray-300;
+}
+
+.cc-btn-active {
+  @apply size-7 flex items-center justify-center rounded-full bg-blue-500 text-white cursor-pointer hover:bg-blue-400 transition-colors;
+}
+
+.cc-text {
+  @apply text-xs;
+}
+
+.dark .cc-text {
+  @apply text-white/60;
+}
+
+:not(.dark) .cc-text {
+  @apply text-gray-500;
+}
+
+/* --------- Menu Box --------- */
+
+.menu-box {
+  @apply fixed top-9.5 z-20 py-2 rounded-lg backdrop-blur-3xl shadow-2xl;
+}
+
+.dark .menu-box {
+  @apply text-white;
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+:not(.dark) .menu-box {
+  @apply text-gray-900;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 /* --------- spotlight --------- */
 
 .spotlight {
-  @apply fixed z-20 h-max top-1/4 -mt-16 w-165 -ml-82.5 left-1/2 rounded-lg backdrop-blur-2xl shadow-2xl shadow-black/40 bg-c-100/80 border border-menu;
+  @apply fixed z-20 h-max top-1/4 -mt-16 w-165 -ml-82.5 left-1/2 rounded-lg backdrop-blur-3xl shadow-2xl shadow-black/40;
 }
 
-.spotlight input::placeholder {
-  @apply text-c-black/40;
+.dark .spotlight {
+  @apply text-white;
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.spotlight .spotlight-type {
-  @apply relative hstack pl-2.5 py-2 text-xs leading-none text-c-500 font-medium;
+:not(.dark) .spotlight {
+  @apply text-gray-900;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark .spotlight input::placeholder {
+  @apply text-white/40;
+}
+
+:not(.dark) .spotlight input::placeholder {
+  @apply text-gray-400;
+}
+
+.dark .spotlight .spotlight-type {
+  @apply relative hstack pl-2.5 py-2 text-xs leading-none text-white/60 font-medium;
+}
+
+:not(.dark) .spotlight .spotlight-type {
+  @apply relative hstack pl-2.5 py-2 text-xs leading-none text-gray-500 font-medium;
 }
 
 @media (max-width: 639px) {

@@ -1,6 +1,4 @@
 import React from "react";
-import Slider from "react-rangeslider";
-import "react-rangeslider/lib/index.css";
 import { music } from "~/configs";
 
 interface SliderProps {
@@ -9,21 +7,48 @@ interface SliderProps {
   setValue: (value: number) => void;
 }
 
-const SliderComponent = ({ icon, value, setValue }: SliderProps) => (
-  <div className="slider flex">
-    <div className="size-7 flex-center bg-gray-700 border-t border-l border-b border-gray-600 rounded-l-full">
-      <span className={icon + " text-xs text-gray-300"} />
+const SliderComponent = ({
+  icon,
+  value,
+  setValue,
+  dark
+}: SliderProps & { dark: boolean }) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(Number(e.target.value));
+  };
+
+  return (
+    <div className="slider flex items-center">
+      <div
+        className={`size-7 flex items-center justify-center rounded-l-full border-t border-l border-b ${
+          dark ? "bg-white/10 border-white/10" : "bg-gray-200 border-gray-300"
+        }`}
+      >
+        <span className={`${icon} text-xs ${dark ? "text-white/70" : "text-gray-600"}`} />
+      </div>
+      <div
+        className={`flex-1 h-7 rounded-r-full relative overflow-hidden border-t border-r border-b ${
+          dark ? "bg-white/10 border-white/10" : "bg-gray-200 border-gray-300"
+        }`}
+      >
+        <div
+          className={`absolute left-0 top-0 h-full transition-all ${
+            dark ? "bg-white/30" : "bg-blue-400"
+          }`}
+          style={{ width: `${value}%` }}
+        />
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value={value}
+          onChange={handleChange}
+          className="absolute w-full h-full opacity-0 cursor-pointer z-10"
+        />
+      </div>
     </div>
-    <Slider
-      min={1}
-      max={100}
-      value={value}
-      tooltip={false}
-      orientation="horizontal"
-      onChange={(v: number) => setValue(v)}
-    />
-  </div>
-);
+  );
+};
 
 interface CCMProps {
   toggleControlCenter: () => void;
@@ -67,12 +92,17 @@ export default function ControlCenterMenu({
 
   return (
     <div
-      className="w-80 h-96 max-w-full shadow-menu p-2.5 text-white bg-gray-800/95 backdrop-blur-2xl fixed top-9.5 right-0 sm:right-1.5 border border-gray-700 rounded-2xl"
+      className={`w-80 h-96 max-w-full p-2.5 backdrop-blur-3xl fixed top-9.5 right-0 sm:right-1.5 rounded-2xl shadow-2xl ${
+        dark ? "text-white bg-gray-900/80" : "text-gray-900 bg-white/80"
+      }`}
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(4, 1fr)",
         gridTemplateRows: "repeat(5, 1fr)",
-        gap: "0.5rem"
+        gap: "0.5rem",
+        border: dark
+          ? "1px solid rgba(255, 255, 255, 0.1)"
+          : "1px solid rgba(0, 0, 0, 0.1)"
       }}
       ref={controlCenterRef}
     >
@@ -81,7 +111,7 @@ export default function ControlCenterMenu({
         style={{ gridRow: "span 2", gridColumn: "span 2" }}
       >
         <div className="flex items-center space-x-2">
-          <div className={`${wifi ? "cc-btn" : "cc-btn-active"}`} onClick={toggleWIFI}>
+          <div className={`${wifi ? "cc-btn-active" : "cc-btn"}`} onClick={toggleWIFI}>
             <span className="i-material-symbols-wifi text-base" />
           </div>
           <div className="pt-0.5">
@@ -91,7 +121,7 @@ export default function ControlCenterMenu({
         </div>
         <div className="flex items-center space-x-2">
           <div
-            className={`${bluetooth ? "cc-btn" : "cc-btn-active"}`}
+            className={`${bluetooth ? "cc-btn-active" : "cc-btn"}`}
             onClick={toggleBluetooth}
           >
             <span className="i-charm-bluetooth text-base" />
@@ -103,7 +133,7 @@ export default function ControlCenterMenu({
         </div>
         <div className="flex items-center space-x-2">
           <div
-            className={`${airdrop ? "cc-btn" : "cc-btn-active"}`}
+            className={`${airdrop ? "cc-btn-active" : "cc-btn"}`}
             onClick={toggleAirdrop}
           >
             <span className="i-material-symbols-rss-feed-rounded text-base" />
@@ -118,7 +148,7 @@ export default function ControlCenterMenu({
         className="cc-grid col-span-2 p-2 flex items-center space-x-3"
         style={{ gridColumn: "span 2" }}
       >
-        <div className={`${dark ? "cc-btn" : "cc-btn-active"}`} onClick={toggleDark}>
+        <div className={`${dark ? "cc-btn-active" : "cc-btn"}`} onClick={toggleDark}>
           {dark ? (
             <span className="i-ion-moon text-base" />
           ) : (
@@ -149,14 +179,24 @@ export default function ControlCenterMenu({
         style={{ gridColumn: "span 4" }}
       >
         <span className="font-medium ml-0.5">Display</span>
-        <SliderComponent icon="i-ion-sunny" value={brightness} setValue={setBrightness} />
+        <SliderComponent
+          icon="i-ion-sunny"
+          value={brightness}
+          setValue={setBrightness}
+          dark={dark}
+        />
       </div>
       <div
         className="cc-grid col-span-4 px-2.5 py-2 space-y-1 flex flex-col justify-around"
         style={{ gridColumn: "span 4" }}
       >
         <span className="font-medium ml-0.5">Sound</span>
-        <SliderComponent icon="i-ion-volume-high" value={volume} setValue={setVolume} />
+        <SliderComponent
+          icon="i-ion-volume-high"
+          value={volume}
+          setValue={setVolume}
+          dark={dark}
+        />
       </div>
       <div
         className="cc-grid col-span-4 flex items-center space-x-2.5 py-2 pl-2 pr-4"
