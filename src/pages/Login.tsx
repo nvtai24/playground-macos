@@ -30,15 +30,17 @@ export default function Login(props: MacActions) {
     <div
       className="size-full login text-center"
       style={{
-        background: `url(${
-          dark ? wallpapers.night : wallpapers.day
-        }) center/cover no-repeat`
+        background: `url(${wallpapers.katana}) center/cover no-repeat`
       }}
       onClick={() => loginHandle()}
     >
       <div className="inline-block w-auto relative top-1/2 -mt-40">
         {/* Avatar */}
-        <img className="rounded-full size-24 my-0 mx-auto" src={user.avatar} alt="img" />
+        <img
+          className="rounded-full size-24 my-0 mx-auto object-cover"
+          src={user.avatar}
+          alt="img"
+        />
         <div className="font-semibold mt-2 text-xl text-white">{user.name}</div>
 
         {/* Password Input */}
